@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>我的上帝</title>
+   	<!--  <link href="/concat/??/css/art/forum.css" rel="stylesheet"> -->
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+</head>
+<style>
+.container .info table th {
+    height: 39px;
+    text-align: left;
+    padding-left: 10px;
+}
+
+.container .info table td input {
+    height: 100%;
+    border: none;
+    font-size: 14px;
+    font-family: "Arial", "Microsoft YaHei";
+    color: #24537e;
+    background: #ededed;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.genderselect {
+	height: 27px;
+    border: 1px solid #C1C8CC;
+    border-radius: 4px;
+    font-size: 14px;
+    font-family: "Arial", "Microsoft YaHei";
+    color: #24537e;
+    background: #ededed;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+</style>
+<script type="text/javascript">
+
+</script>
+<body>
+<div class="container">
+    <div class="ctitle" style="margin-top: 0px;">
+        <div class="decoration">登录成功</div>
+    </div>
+</div>
+</body>
+</html>

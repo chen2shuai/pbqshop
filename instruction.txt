@@ -1,0 +1,13 @@
+
+文件
+1、web.xml  servlet,filter,listener 以及配置文件的加载 (application-*.xml 以及log4j.properties)
+
+2、applicationContext-db.xml文件中主要负责配置：加载db.properties、配置数据源、配置SqlSessionFactoryBean、Mapper扫描器
+
+3、applicationContext-service.xml该文件主要负责扫描业务层组件
+
+4、applicationContext-transaction.xml 该文件处理数据库事务
+
+5、pbqshop-servlet.xml 该文件加载标注@Controller,打开注解的处理器适配器，注解的处理器映射器以及视图解析器等等
+
+

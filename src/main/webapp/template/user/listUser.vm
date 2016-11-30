@@ -1,0 +1,70 @@
+#parse("./common.vm")
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta charset="UTF-8">
+<title>user列表</title>
+<link rel="stylesheet" type="text/css" href="js/themes/icon.css" />
+</head>
+<script type="text/javascript">
+$(function(){
+	init_page();
+	#*
+	$(".panel-header").css('width','auto');
+	$(".panel-body").css('width','auto');
+	$(".datagrid-view").css('width','auto'); 
+	*#
+});
+
+function fixWidth(percent){
+	return document.body.clientWidth*percent;
+}
+
+function columnsFormatter(value,row,index){
+	if(row.usertype == '1'){
+		value="管理员";
+	}else if(row.usertype == '2'){
+		value="普通用户";
+	}
+	return value;
+}
+
+function init_page(){
+	var params = {};
+	params.userid = 1;
+	params.username = "test";
+	$('#userGrid').datagrid({
+		loadMsg:'数据加载中....',
+		title:"管理员信息一览表",
+		url:'/queryListUser.json',
+		method:'POST',
+		queryParams:{'params':JSON.stringify(params)},
+		striped:true,  //设置为true将交替显示行背景。相邻行不同颜色
+		//fit:false,//自适应大小
+		//fitColumns:true,//列宽适应浏览器,无左右滚动条
+		rownumbers:true,//行number
+		pagination:true,//显示页码
+		pageSize:10,//初始化每页显示的条数
+		pageList:[10,20,50,100],//可以调节的每页显示条数
+		columns:[[
+		    {field:'ck',width: fixWidth(0.05),checkbox:true},
+		    { field: 'username', title: '用户名', width:300, sortable:true, align: 'center' },
+	        { field: 'password', title: '密码',width:100, align: 'center' },
+	        { field: 'usertype', title: '类型', width:300, align: 'center',formatter:columnsFormatter},
+	        { field: 'createTime', title: '创建时间', width:100, align: 'center'}
+		]]
+	});
+	//var pageSize = $('#userGrid').datagrid('getPager').data("pagination").options.pageSize;//
+}
+
+function queryPages(){
+	$('#userGrid').datagrid("reload");
+}
+
+</script>
+<body>
+	<div class="container">
+		<div id="userGrid"></div>
+	</div>
+</body>
+</html>

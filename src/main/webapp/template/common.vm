@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css"href="js/themes/default/easyui.css" />
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.easyui.min.1.5.js"></script>
+    <script type="text/javascript" src="js/json2.js"></script>
+</head>
+</html>
