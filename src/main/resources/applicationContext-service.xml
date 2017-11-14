@@ -15,4 +15,7 @@
 	<mvc:annotation-driven />
 	<!-- 自動检测bean，并注册被@Component，@Controller，@Service，@Repository等注解标记的组件 -->
 	<context:component-scan base-package="com.shop.web.*" />
+
+	<!-- 启用spring mvc 注解 -->
+	<context:annotation-config />
 </beans>
